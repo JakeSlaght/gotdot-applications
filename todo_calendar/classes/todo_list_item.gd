@@ -1,5 +1,6 @@
 extends VBoxContainer
 
+@onready var todo_description: Label = %todo_description
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
