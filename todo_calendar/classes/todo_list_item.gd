@@ -1,12 +1,15 @@
 extends VBoxContainer
 
 @onready var todo_description: Label = %todo_description
+@export var todo_description_text: String = ""
+
+signal delete_todo
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	todo_description.text = todo_description_text
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+
+func _on_delete_button_pressed() -> void:
+	delete_todo.emit(self)
