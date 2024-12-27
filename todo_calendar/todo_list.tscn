@@ -1,0 +1,50 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqlw0uku8eshx"]
+
+[ext_resource type="PackedScene" uid="uid://x0p74t7nmq6v" path="res://add_todo.tscn" id="1_33c02"]
+[ext_resource type="Script" path="res://classes/todo_list.gd" id="1_st8ln"]
+[ext_resource type="PackedScene" uid="uid://ch4adqotf1ihk" path="res://todo_list_item.tscn" id="2_sf0w0"]
+
+[node name="Todo_List" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_st8ln")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.418791, 0.0335531, 0.0778155, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Temporary FIller Until the List Structure is Done...
+"
+
+[node name="todo_list_item" parent="ColorRect/MarginContainer/VBoxContainer" instance=ExtResource("2_sf0w0")]
+layout_mode = 2
+
+[node name="add_todo" parent="ColorRect/MarginContainer/VBoxContainer" instance=ExtResource("1_33c02")]
+unique_name_in_owner = true
+layout_mode = 2
