@@ -3,6 +3,14 @@
 [ext_resource type="Script" path="res://add_todo.gd" id="1_fagm3"]
 
 [node name="add_todo" type="HBoxContainer"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -234.0
+offset_right = 234.0
+offset_bottom = 32.0
+grow_horizontal = 2
+size_flags_horizontal = 4
 size_flags_vertical = 10
 script = ExtResource("1_fagm3")
 
