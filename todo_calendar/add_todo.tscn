@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://x0p74t7nmq6v"]
+
+[ext_resource type="Script" path="res://add_todo.gd" id="1_fagm3"]
+
+[node name="add_todo" type="HBoxContainer"]
+size_flags_vertical = 10
+script = ExtResource("1_fagm3")
+
+[node name="todo_text" type="TextEdit" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(425, 32)
+layout_mode = 2
+placeholder_text = "Todo...."
+
+[node name="add_button" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Add"
+
+[connection signal="pressed" from="add_button" to="." method="_on_add_button_pressed"]

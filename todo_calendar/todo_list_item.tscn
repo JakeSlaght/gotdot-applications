@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://ch4adqotf1ihk"]
+
+[node name="todo_list_item" type="VBoxContainer"]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="expand_button" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Expand"
+
+[node name="todo_description" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "test...test...test...test...test...test..."
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="CheckBox" type="CheckBox" parent="HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="delete_button" type="Button" parent="HBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Delete
+"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+custom_minimum_size = Vector2(475, 200)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
